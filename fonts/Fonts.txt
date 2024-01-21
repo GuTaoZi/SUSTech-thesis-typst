@@ -1,0 +1,5 @@
+由于Typst目前(Jan 21, 2024)尚未支持伪粗体，SimSun等加粗无法正常显示，因此需要为宋体和黑体安装带有变体的字体，可以通过以下链接下载：
+
+思源黑体：https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSans.ttc.zip
+
+思源宋体：https://github.com/adobe-fonts/source-han-serif/releases/download/2.002R/01_SourceHanSerif.ttc.zip
