@@ -11,7 +11,7 @@
   text("诚信承诺书",size: FSIZE.二号,font: FONTS.黑体, weight: "bold")
   set align(left)
   set text(size: FSIZE.四号,font: FONTS.宋体)
-  par(leading: 1.5em,first-line-indent: 2em)[
+  par(first-line-indent: 2em)[
   \
   \
 
@@ -29,13 +29,12 @@
   \
   ]
   align(right)[
-    #block(width: 12em)[
+    #block(width: 11em)[
       #align(left)[
         #text("作者签名：")
-
+        \
         #text("________年____月____日")
       ]
     ]
   ]
-  pagebreak()
 }

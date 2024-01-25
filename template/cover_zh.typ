@@ -18,14 +18,14 @@
         columns: (auto,-15pt,auto),
         rect(
             stroke: none,
-            text(font: FONTS.宋体,size: FSIZE.小四,weight: "bold",term)
+            text(font: FONTS.宋体,size: FSIZE.小四,term)
         ),
         "",
         rect(
           width: 3cm,
           stroke: (bottom: 1pt + black),
           align(center)[
-#text(font : FONTS.宋体, size : FSIZE.小四, weight : "bold", value)
+            #text(font : FONTS.宋体, size : FSIZE.小四, value)
           ]
         )
       )
@@ -39,12 +39,14 @@
     block(
       width: 100%,
       gridx(
-        columns: (10em,-30pt,auto),
+        columns: (10em,auto),
         rect(
+            width: 10em,
             stroke: none,
-            text(font: FONTS.宋体,size: FSIZE.三号,weight: "bold",term)
+            align(right)[
+              #text(font: FONTS.宋体,size: FSIZE.三号,weight: "bold",term)
+            ]
         ),
-        "",
         rect(
           width: 9.5cm,
           stroke: (bottom: 1pt + black),
@@ -161,6 +163,4 @@
   #text(font: FONTS.宋体,size: FSIZE.三号,datetime_display_zh(
     info.submit_date,
   ))]
-
-  pagebreak()
 }
