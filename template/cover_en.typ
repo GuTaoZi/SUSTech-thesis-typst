@@ -152,7 +152,7 @@
     info.major,
   )
   display_info(
-    "Thesis Aadvisor：",
+    "Thesis Advisor：",
     info.supervisor,
   )
   // render submit date
