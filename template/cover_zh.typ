@@ -133,10 +133,12 @@
     it = it + 1
   }
 
-  display_info(
-    " ",
-    info.subtitle,
-  )
+  if info.subtitle != "" {
+    display_info(
+      " ",
+      info.subtitle,
+    )
+  }
 
   display_info(
     "姓　　名：",
