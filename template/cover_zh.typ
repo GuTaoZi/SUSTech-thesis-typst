@@ -1,6 +1,6 @@
 #import "../utils/datetime_display.typ" : *
-#import "../utils/style.typ" : *
-#import "@preview/tablex:0.0.6" : *
+#import "../utils/font.typ" : *
+#import "@preview/tablex:0.0.9" : *
 
 #let cover_zh(
   anonymous: false,

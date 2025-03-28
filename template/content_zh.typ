@@ -1,4 +1,4 @@
-#import "../utils/style.typ": *
+#import "../utils/font.typ": *
 
 #let content_zh(
 ) = {

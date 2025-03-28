@@ -1,6 +1,6 @@
 #import "../utils/datetime_display.typ" : *
-#import "../utils/style.typ" : *
-#import "@preview/tablex:0.0.6" : *
+#import "../utils/font.typ" : *
+#import "@preview/tablex:0.0.9" : *
 
 #let cover_en(
   anonymous: false,
@@ -88,7 +88,7 @@
       )
     ],
     align(right+horizon)[
-      #text(font: FONTS.宋体,size: FSIZE.小四,"Available for reference   ◻Yes ◻No")
+      #text(font: FONTS.宋体,size: FSIZE.小四,"Available for reference   □Yes □No")
     ],
   )
 

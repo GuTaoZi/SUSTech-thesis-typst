@@ -1,4 +1,4 @@
-#import "../utils/style.typ": *
+#import "../utils/font.typ": *
 
 #let appendix(
   en_title: false,

@@ -8,9 +8,9 @@
 
 ## 为什么选择Typst?
 
-1. $\LaTeX$语法复杂，可读性低，要从通篇都是反斜杠和花括号的源码中定位文本费时费力。同时在文本数量增多后，编译一次用时几分钟，浪费时间是对写作者的慢性谋杀。
+1. $\LaTeX$语法复杂，可读性低，要从通篇都是反斜杠和花括号的源码中定位文本费时费力。在文本数量增多后编译时间也会极大增加，浪费时间是对写作者的慢性谋杀。
 
-2. Word排版不够优雅，时常出现各种血压情况与排版问题，且每一段都需要手动调整格式，没有技术含量的重复性工作拖累学术写作。
+2. Word排版不够优雅，时常出现各种血压情况与排版问题，每一段都需要手动调整格式，没有技术含量的重复性工作拖累学术写作。
 
 Typst 是可用于出版的可编程标记语言，拥有变量、函数与包管理等现代编程语言的特性，注重于科学写作 (science writing)，定位与 LaTeX 相似。可以阅读[@OrangeX4](https://github.com/OrangeX4):[Typst 中文用户使用体验](https://zhuanlan.zhihu.com/p/669097092) 进一步了解 Typst 的优势。
 
@@ -20,7 +20,7 @@ Typst拥有活跃的社区与完善的文档，可以阅读[Typst Official Tutor
 
 ### 在线编辑
 
-Typst提供了[Web App](https://typst.app/)以支持在线编辑，其使用类似于用Overleaf编写LaTeX，但Typst的增量编译实时渲染让学术写作效率与体验远超recompile一次要一年的LaTeX，极大提高效率和开发体验。
+Typst提供了[Web App](https://typst.app/)以支持在线编辑，其使用类似于用Overleaf编写LaTeX，但Typst的增量编译实时渲染让学术写作效率与体验远超LaTeX，极大提高效率和开发体验。
 
 目前Typst Web App对自行上传字体的支持尚不完善，本模板涉及的字体并未完全被在线编辑器支持，因此在使用该模板时推荐使用本地编辑，不过平时写作业/报告使用Web App绰绰有余。
 
@@ -34,7 +34,6 @@ git clone https://github.com/GuTaoZi/SUSTech-thesis-typst.git
 
 2. 使用Visual Studio Code打开此文件夹，安装以下插件以支持Typst本地编辑与预览：
 - [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)
-- [Typst Preview](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview)
 - [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion)
 
 3. 打开目录下的`thesis.typ`，使用`CTRL+SHIFT+P`快捷键输入命令`Typst Preview: Preview current file`，即可实时渲染论文了，同时也可以进行双向定位。
@@ -63,10 +62,13 @@ typst compile --font-path fonts thesis.typ ./build/thesis.pdf
     - [x] 中文摘要
     - [x] 英文摘要
     - [x] 目录页
+	- [x] 引用与脚注
+	- [x] 图片、表格与代码块
+    - [x] 致谢
+	- [ ] 公式
     - [ ] 插图目录
     - [ ] 表格目录
     - [ ] 符号表
-    - [x] 致谢
 
 ## 参与贡献
 

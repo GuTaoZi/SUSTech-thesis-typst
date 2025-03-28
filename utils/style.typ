@@ -1,26 +1,65 @@
-#let FSIZE = (
-  初号: 42pt,
-  小初: 36pt,
-  一号: 26pt,
-  小一: 24pt,
-  二号: 22pt,
-  小二: 18pt,
-  三号: 16pt,
-  小三: 15pt,
-  四号: 14pt,
-  中四: 13pt,
-  小四: 12pt,
-  五号: 10.5pt,
-  小五: 9pt,
-  六号: 7.5pt,
-  小六: 6.5pt,
-  七号: 5.5pt,
-  小七: 5pt,
-)
+#import "@preview/codly:1.2.0": *
+#import "@preview/codly-languages:0.1.7": *
+// 官方模板就代码块样式没有作要求，因此本模板使用codly插件来渲染代码块。
+// 使用说明：https://typst.app/universe/package/codly/
 
-#let FONTS = (
-  宋体: ("Times New Roman", "Source Han Serif SC", "Source Han Serif", "Noto Serif CJK SC", "SimSun", "Songti SC", "STSongti"),
-  黑体: ("Times New Roman", "Source Han Sans SC", "Source Han Sans", "Noto Sans CJK SC", "SimHei", "Heiti SC", "STHeiti"),
-  楷体: ("Times New Roman", "KaiTi", "Kaiti SC", "STKaiti", "FZKai-Z03S"),
-  TNR: ("Times New Roman"),
-)
+#import "headings.typ" : *
+
+#let documentClass(body) = [
+	// 标题样式
+	#set heading(numbering: sustech-undergraduate-heading-numbering)
+	#show heading: it => {
+		set text(
+			font: FONTS.黑体,
+			size: array.at(heading-size, (it.level)-1),
+			weight: "regular",
+		)
+		it
+	}
+	// 正文样式
+	#set text(
+		lang: "zh",
+		font: FONTS.宋体,
+		size: FSIZE.小四,
+	)
+	#set par(
+		first-line-indent: (
+			amount: 2*FSIZE.小四,
+			all: true,
+		),
+		leading: 1.5*FSIZE.小四,
+	)
+	// 图片样式
+	#show figure.caption: it => {
+		set text(
+			font: FONTS.黑体,
+			size: FSIZE.五号,
+			weight: "regular",
+		)
+		it
+	}
+	// 表格样式
+	#show figure.where(
+		kind: table
+	): set figure.caption(position: top)
+	// 代码块样式
+	#show: codly-init.with()
+	#codly(
+		languages: codly-languages,
+		display-name: false,
+		display-icon: false,
+		zebra-fill: none,
+	)
+	// 页码样式
+	#set page(
+		footer: context [
+			#set align(center)
+			#set text(
+				font: "Times New Roman",
+				size: FSIZE.五号,
+			)
+			#counter(page).display()
+		]
+	)
+	#body
+]

@@ -8,6 +8,7 @@
 #import "decl_zh.typ" : *
 #import "decl_en.typ": *
 #import "references.typ" : *
+#import "../utils/style.typ": documentClass
 
 #let cover(
   en: false,
@@ -104,3 +105,14 @@
   content_zh()
   pagebreak()
 }
+
+	#let dataSource(
+		body
+	) = {
+		set align(center)
+		text(
+			font: FONTS.宋体,
+			size: FSIZE.五号,
+			body
+		)
+	}
