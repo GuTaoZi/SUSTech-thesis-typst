@@ -18,10 +18,12 @@ if show_title {
     // text(size: FSIZE.二号, font: FONTS.黑体,line)
   }
 
-  align(right)[
-    #text(size: FSIZE.小二, font: "Arial", "---")
-    #text(size: FSIZE.小二, font: FONTS.黑体, info.subtitle)
-  ]
+  if info.subtitle != "" {
+    align(right)[
+      #text(size: FSIZE.小二, font: "Arial", "---")
+      #text(size: FSIZE.小二, font: FONTS.黑体, info.subtitle)
+    ]
+  }
 
   text(size: FSIZE.四号, font: FONTS.宋体)[
     #info.author
