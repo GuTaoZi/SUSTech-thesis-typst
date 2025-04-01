@@ -2,19 +2,19 @@
 
 \* 本项目绝赞施工中，欢迎参与开发或提出宝贵意见！
 
-南方科技大学毕业论文（设计）的Typst模板，拥有Markdown的实时渲染与简洁语法，不输$\LaTeX$的自动排版，如Word写作一样轻松上手。本模板按照[南方科技大学本科生毕业论文（设计）撰写规范](https://tao.sustech.edu.cn/studentService/graduation_project.html)进行编写，但由于本模板并非官方模板，**存在不被认可的风险**。
+南方科技大学毕业论文（设计）的Typst模板，拥有Markdown的实时渲染与简洁语法，不输 $\LaTeX$ 的自动排版，如Word写作一样轻松上手。本模板按照[南方科技大学本科生毕业论文（设计）撰写规范](https://tao.sustech.edu.cn/studentService/graduation_project.html)进行编写，但由于本模板并非官方模板，**存在不被认可的风险**。
 
 查看示例论文：[thesis.pdf](./build/thesis.pdf)
 
 ## 为什么选择Typst?
 
-1. $\LaTeX$语法复杂，可读性低，要从通篇都是反斜杠和花括号的源码中定位文本费时费力。在文本数量增多后编译时间也会极大增加，浪费时间是对写作者的慢性谋杀。
+1. $\LaTeX$ 语法复杂，可读性低，要从通篇都是反斜杠和花括号的源码中定位文本费时费力。在文本数量增多后编译时间也会极大增加，浪费时间是对写作者的慢性谋杀。
 
 2. Word排版不够优雅，时常出现各种血压情况与排版问题，每一段都需要手动调整格式，没有技术含量的重复性工作拖累学术写作。
 
 Typst 是可用于出版的可编程标记语言，拥有变量、函数与包管理等现代编程语言的特性，注重于科学写作 (science writing)，定位与 LaTeX 相似。可以阅读[@OrangeX4](https://github.com/OrangeX4):[Typst 中文用户使用体验](https://zhuanlan.zhihu.com/p/669097092) 进一步了解 Typst 的优势。
 
-Typst拥有活跃的社区与完善的文档，可以阅读[Typst Official Tutorial](https://typst.app/docs/tutorial/)或[Typst 中文文档网站](https://typst-doc-cn.github.io/docs/)快速上手，如果你是有经验的$\LaTeX$写手，可以参考[LaTeX 用户指南](https://typst-doc-cn.github.io/docs/guides/guide-for-latex-users/)。
+Typst拥有活跃的社区与完善的文档，可以阅读[Typst Official Tutorial](https://typst.app/docs/tutorial/)或[Typst 中文文档网站](https://typst-doc-cn.github.io/docs/)快速上手，如果你是有经验的 $\LaTeX$ 写手，可以参考[LaTeX 用户指南](https://typst-doc-cn.github.io/docs/guides/guide-for-latex-users/)。
 
 ## 搭建编写环境
 
@@ -79,6 +79,6 @@ typst compile --font-path fonts thesis.typ ./build/thesis.pdf
 
 ## 致谢
 
-- 感谢[梁钰栋学长](https://github.com/iydon)开发的$\LaTeX$版本学士学位论文模板[sustechthesis](https://github.com/iydon/sustechthesis)，本项目开发过程中参考了其排版。
+- 感谢[梁钰栋学长](https://github.com/iydon)开发的 $\LaTeX$ 版本学士学位论文模板[sustechthesis](https://github.com/iydon/sustechthesis)，本项目开发过程中参考了其排版。
 - 感谢[nju-thesis-typst](https://github.com/nju-lug/nju-thesis-typst)等基于Typst的中文学位论文模板，文档详细结构清晰，本项目开发过程中多有借鉴。
 
