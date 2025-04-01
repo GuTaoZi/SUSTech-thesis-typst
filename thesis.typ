@@ -89,7 +89,8 @@
   anonymous: false,
   info_zh: info,
   info_en: info_en,
-  keywords: keywords_zh,
+  keywords_zh: keywords_zh,
+  keywords_en: keywords_en,
   body_zh: abstract_body_zh,
   body_en: abstract_body_en,
 )

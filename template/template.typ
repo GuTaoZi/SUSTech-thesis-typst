@@ -85,7 +85,8 @@
   prefer_en_header: false,
   en: false,
   anonymous: false,
-  keywords: (:),
+  keywords_zh: (:),
+  keywords_en: (:),
   info_zh: (:),
   info_en: (:),
   fonts: (:),
@@ -107,7 +108,7 @@
   if (en) {
     // en first
     abstract_en(
-      keywords: keywords,
+      keywords: keywords_en,
       info: info_en,
       fonts: fonts,
     )[#body_en]
@@ -115,21 +116,21 @@
     pagebreak(weak: true)
 
     abstract_zh(
-      keywords: keywords,
+      keywords: keywords_zh,
       info: info_zh,
       fonts: fonts,
     )[#body_zh]
   }
   else {
     abstract_zh(
-      keywords: keywords,
+      keywords: keywords_zh,
       fonts: fonts,
     )[#body_zh]
     
     pagebreak(weak: true)
 
     abstract_en(
-      keywords: keywords,
+      keywords: keywords_en,
       fonts: fonts,
     )[#body_en]
   }
