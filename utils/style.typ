@@ -63,5 +63,7 @@
 			#counter(page).display()
 		]
 	)
+	// Formula Style
+	#set math.equation(numbering: num => "(" + (counter(heading).get() + (num,)).map(str).join(".") + ")")
 	#body
 ]

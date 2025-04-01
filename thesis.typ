@@ -108,6 +108,14 @@
 
 #lorem(300)
 
+$
+a^2 = b^2 + c^2
+$
+
+$
+a^2 = b^2 + c^2
+$ <pt>
+
 = 示例
 
 == 引用示例 <引用示例>
@@ -117,6 +125,13 @@
 == 脚注示例
 
 #lorem(20)#footnote("这是一个脚注示例")
+
+
+$
+a^2 = b^2 + c^2
+$ <pt2>
+
+This is a reference of equation @pt, and the above equation @pt2.
 
 == 图片示例
 
