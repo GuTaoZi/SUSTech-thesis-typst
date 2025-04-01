@@ -2,19 +2,20 @@
 
 \* 本项目绝赞施工中，欢迎参与开发或提出宝贵意见！
 
-南方科技大学毕业论文（设计）的Typst模板，拥有Markdown的实时渲染与简洁语法，不输 $\LaTeX$ 的自动排版，如Word写作一样轻松上手。本模板按照[南方科技大学本科生毕业论文（设计）撰写规范](https://tao.sustech.edu.cn/studentService/graduation_project.html)进行编写，但由于本模板并非官方模板，**存在不被认可的风险**。
+南方科技大学毕业论文（设计）的Typst模板，适用于学术写作，编译渲染高效，语法结构简单，排版自由美观。本模板按照[南方科技大学本科生毕业论文（设计）撰写规范](https://tao.sustech.edu.cn/xueshengfuwu/biyelunwen)进行编写，但由于本模板并非官方模板，**存在不被认可的风险**。
 
-查看示例论文：[thesis.pdf](./build/thesis.pdf)
+示例论文：[thesis.pdf](./build/thesis.pdf)
 
 ## 为什么选择Typst?
 
-1. $\LaTeX$ 语法复杂，可读性低，要从通篇都是反斜杠和花括号的源码中定位文本费时费力。在文本数量增多后编译时间也会极大增加，浪费时间是对写作者的慢性谋杀。
+1. $\LaTeX$ 语法更为繁冗，从源码中较难定位文本。在文本数量增多后编译时间也会极大增加。
 
-2. Word排版不够优雅，时常出现各种血压情况与排版问题，每一段都需要手动调整格式，没有技术含量的重复性工作拖累学术写作。
+2. Word在写手不够熟练时容易出现排版混乱的问题，经常性的手动调整部分格式等重复性工作拖累学术写作。
 
-Typst 是可用于出版的可编程标记语言，拥有变量、函数与包管理等现代编程语言的特性，注重于科学写作 (science writing)，定位与 LaTeX 相似。可以阅读[@OrangeX4](https://github.com/OrangeX4):[Typst 中文用户使用体验](https://zhuanlan.zhihu.com/p/669097092) 进一步了解 Typst 的优势。
+Typst 是可用于出版的可编程标记语言，拥有变量、函数与包管理等现代编程语言的特性，注重于科学写作 (science writing)，定位与 LaTeX 相似。Typst拥有活跃的社区与完善的文档，可以阅读[Typst Official Tutorial](https://typst.app/docs/tutorial/)或[小蓝书](https://typst-doc-cn.github.io/tutorial/)快速上手。
 
-Typst拥有活跃的社区与完善的文档，可以阅读[Typst Official Tutorial](https://typst.app/docs/tutorial/)或[Typst 中文文档网站](https://typst-doc-cn.github.io/docs/)快速上手，如果你是有经验的 $\LaTeX$ 写手，可以参考[LaTeX 用户指南](https://typst-doc-cn.github.io/docs/guides/guide-for-latex-users/)。
+- 如果你是有经验的 Word 写手，可以参考[面向 Word 用户的快速入门向导](https://typst-doc-cn.github.io/guide/word.html)。
+- 如果你是有经验的 $\LaTeX$ 写手，可以参考[LaTeX 用户指南](https://typst-doc-cn.github.io/docs/guides/guide-for-latex-users/)。
 
 ## 搭建编写环境
 
@@ -32,17 +33,14 @@ Typst提供了[Web App](https://typst.app/)以支持在线编辑，其使用类�
 git clone https://github.com/GuTaoZi/SUSTech-thesis-typst.git
 ```
 
-2. 使用Visual Studio Code打开此文件夹，安装以下插件以支持Typst本地编辑与预览：
-- [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)
-- [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion)
-
-3. 打开目录下的`thesis.typ`，使用`CTRL+SHIFT+P`快捷键输入命令`Typst Preview: Preview current file`，即可实时渲染论文了，同时也可以进行双向定位。
+2. 推荐使用 VS Code 插件[Tinymist Typst](https://github.com/Myriad-Dreamin/tinymist) 进行预览和编辑，或使用Typst官方提供的[命令行工具](https://github.com/typst/typst/releases)进行预览。
 
 ![开发环境示意图](https://s2.loli.net/2024/01/21/VBqM3uoxA7yJ2t4.png)
 
-4. 在导出为PDF时，可以使用以下命令，将`thesis.pdf`生成到build目录下，也可以`typst --help`了解更多用法。
+3. 在导出为PDF时，可以使用插件或以下命令，将`thesis.pdf`生成到build目录下，也可以`typst --help`了解更多用法。
 
 ```bash
+# 请安装Typst并添加可执行文件路径到PATH
 typst compile --font-path fonts thesis.typ ./build/thesis.pdf
 ```
 
@@ -64,18 +62,18 @@ typst compile --font-path fonts thesis.typ ./build/thesis.pdf
     - [x] 目录页
 	- [x] 引用与脚注
 	- [x] 图片、表格与代码块
+	- [x] 公式
     - [x] 致谢
-	- [ ] 公式
     - [ ] 插图目录
     - [ ] 表格目录
     - [ ] 符号表
 
 ## 参与贡献
 
-一个人的力量总是有限的，模板中可能存在Bug和不优雅的实现，欢迎大家对本模板进行完善改进，为大家提供更舒适优雅的学术写作环境。
+模板中可能存在Bug和不优雅的实现，欢迎大家对本模板进行完善改进，为大家提供更舒适优雅的学术写作环境。
 
-- 关于使用中遇到的问题与未来特性的需求，请通过在本仓库提交issue进行反馈。
-- 非常欢迎通过提交PR等方式实现特性，修复问题，协助项目开发。
+- 关于使用中的问题与未来特性的需求，请通过在本仓库提交issue进行反馈。
+- 非常欢迎通过提交PR等方式实现特性、修复问题、协助项目开发。
 
 ## 致谢
 
