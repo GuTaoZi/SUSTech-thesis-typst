@@ -15,6 +15,7 @@
       #text(font: ("Source Han Sans SC", "Source Han Sans", "Noto Sans CJK SC", "SimHei", "Heiti SC", "STHeiti"),size: FSIZE.三号,weight: "bold", "\nReferences")
     ]
   ]
+  v(3em)
   set text(font: FONTS.宋体,size: FSIZE.五号)
   bibliography(bibPath, title: none, style: "gb-7714-2005-numeric")
 }  
