@@ -1,3 +1,4 @@
+#import "abstract_header.typ" : *
 #import "abstract_zh.typ" : *
 #import "abstract_en.typ" : *
 #import "acknowledge.typ" : *
@@ -59,16 +60,10 @@
   pagebreak(weak: true)
 }
 
-#let abstract(
-  show_title: true,
-  en: false,
-  anonymous: false,
-  keywords: (:),
-  info: (:),
-  fonts: (:),
-  body,
+#let make_default_abstract_info(
+  info: (:)
 ) = {
-  info = (
+  let ret = (
     clc: "CLC",
     thesis_id: "Thesis ID",
     confidentiality_level: "Confidential Level",
@@ -81,24 +76,64 @@
     major: "Major",
     supervisor: "Supervisor",
     submit_date: datetime.today(),
-  )+info
-  if(en){
+  ) + info
+  return ret
+}
+
+#let abstract(
+  show_title: true,
+  prefer_en_header: false,
+  en: false,
+  anonymous: false,
+  keywords: (:),
+  info_zh: (:),
+  info_en: (:),
+  fonts: (:),
+  body_zh: "",
+  body_en: ""
+) = {
+
+  info_zh = make_default_abstract_info(info: info_zh)
+  info_en = make_default_abstract_info(info: info_en)
+  
+  abstract_header(
+    en: prefer_en_header, // By default thesis header should be Chinese no matter what
+    anonymous: anonymous,
+    fonts: fonts,
+    info_zh: info_zh,
+    info_en: info_en
+  )
+
+  if (en) {
+    // en first
     abstract_en(
-      show_title: show_title,
-      anonymous: anonymous,
       keywords: keywords,
-      info: info,
+      info: info_en,
       fonts: fonts,
-    )[#body] 
-  } else {
+    )[#body_en]
+
+    pagebreak(weak: true)
+
     abstract_zh(
-      show_title: show_title,
-      anonymous: anonymous,
       keywords: keywords,
-      info: info,
+      info: info_zh,
       fonts: fonts,
-    )[#body]
+    )[#body_zh]
   }
+  else {
+    abstract_zh(
+      keywords: keywords,
+      fonts: fonts,
+    )[#body_zh]
+    
+    pagebreak(weak: true)
+
+    abstract_en(
+      keywords: keywords,
+      fonts: fonts,
+    )[#body_en]
+  }
+
   pagebreak(weak: true)
 }
 
