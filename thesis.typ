@@ -62,10 +62,11 @@
   anonymous: false,
 )
 
-#declare(
-  en: true,
-  anonymous: false,
-)
+// Remove EN declaration form as it is no longer used in Word template
+// #declare(
+//   en: true,
+//   anonymous: false,
+// )
 
 #set page(numbering: "I")
 #counter(page).update(1)
