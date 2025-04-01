@@ -63,7 +63,8 @@
   print_date: info.submit_date
 )
 
-// Disable EN declaration form to match Word template in Chinese
+// Please disable EN declaration form to match Word template in Chinese
+// Do this by commenting out the following invocation
 #declare(
   en: true,
   anonymous: false,
