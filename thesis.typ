@@ -46,7 +46,7 @@
 #declare(
   en: false,
   anonymous: false,
-  print_date: info.submit_date
+  print_date: none
 )
 
 // Please disable EN declaration form to match Word template in Chinese
@@ -54,7 +54,7 @@
 #declare(
   en: true,
   anonymous: false,
-  print_date: info.submit_date
+  print_date: none
 )
 
 #set page(numbering: "I")
