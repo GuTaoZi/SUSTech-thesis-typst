@@ -60,13 +60,15 @@
 #declare(
   en: false,
   anonymous: false,
+  print_date: info.submit_date
 )
 
-// Remove EN declaration form as it is no longer used in Word template
-// #declare(
-//   en: true,
-//   anonymous: false,
-// )
+// Disable EN declaration form to match Word template in Chinese
+#declare(
+  en: true,
+  anonymous: false,
+  print_date: info.submit_date
+)
 
 #set page(numbering: "I")
 #counter(page).update(1)

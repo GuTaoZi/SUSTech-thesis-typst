@@ -48,12 +48,13 @@
 
 #let declare(
   en: false,
-  anonymous: false
+  anonymous: false,
+  print_date: datetime.today(),
 ) = {
   if(en){
-    decl_en(anonymous: anonymous)
+    decl_en(anonymous: anonymous, print_date: print_date)
   } else {
-    decl_zh(anonymous: anonymous)
+    decl_zh(anonymous: anonymous, print_date: print_date)
   }
   pagebreak(weak: true)
 }
