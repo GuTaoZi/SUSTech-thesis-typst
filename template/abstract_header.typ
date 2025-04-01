@@ -27,6 +27,8 @@
       #info_zh.author
     ]
 
+    linebreak()
+    
     text(size: FSIZE.小四, font: FONTS.楷体)[
       (#info_zh.department  指导教师：#info_zh.supervisor)\
       \
@@ -48,9 +50,9 @@
 
     text(size: FSIZE.四号, font: FONTS.宋体)[
       #info_en.author
-
     ]
 
+    linebreak()
 
     text(size: FSIZE.小四, font: FONTS.楷体)[
       (#info_en.department #h(1em) Thesis Advisor: #info_en.supervisor)\
