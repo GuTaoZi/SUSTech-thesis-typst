@@ -26,6 +26,8 @@
           if text.lang == "en" {"References"} else {"参考文献"}
         }
       )
+    ]
+    align(left)[
       #v(3em)
       #set text(
         font: FONTS.宋体,
