@@ -1,6 +1,8 @@
 
 #import "template/template.typ": *
-#show: documentClass
+
+// Select the active text language: Chinese(zh) or English(en)
+#show: documentClass.with(lang: "zh")
 
 #let info = (
   clc: "CLC",
@@ -8,7 +10,7 @@
     confidentiality_level: "公开",
     udc: "UDC",
     title: ("基于Typst的","南方科技大学毕业论文模板"),
-    subtitle: "v0.0.3",
+    subtitle: "v0.1.0",
     author: "咕桃",
     student_id: "32123432",
     department: "计算机科学与工程系",
@@ -22,7 +24,7 @@
     thesis_id: "20250328",
     udc: "UDC",
     title: ("Graduation Thesis Template","Based on Typst"),
-    subtitle: "v0.0.3",
+    subtitle: "v0.1.0",
     author: "GuTao",
     student_id: "32123432",
     department: "Computer Science and Engineering",
@@ -157,9 +159,9 @@ This is a reference of equation @pt, and the above equation @pt2.
 )<表格示例>
 #dataSource("表格数据来源：实验数据")
 
-#references()
+#references(show_both: true)
 
-#appendix()
+#appendix(show_both: true)
 #set heading(numbering: none)
 
 == 附录A 代码示例
@@ -174,6 +176,6 @@ int main() {
 }
 ```
 
-#acknoledgement(en_title: true)[
-  截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.0.3。 感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学，你们的支持是模板不断更新迭代的动力，也是笔者最大的荣幸。
+#acknoledgement(show_both: true)[
+  截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.1.0。 感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学，你们的支持是模板不断更新迭代的动力，也是笔者最大的荣幸。
 ]

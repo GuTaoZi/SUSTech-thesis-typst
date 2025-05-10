@@ -5,10 +5,10 @@
 
 #import "headings.typ" : *
 
-#let documentClass(body) = [
+#let documentClass(lang: "zh", body) = [
 	// 标题样式
-	#import "@preview/cuti:0.3.0": show-cn-fakebold
-	#show: show-cn-fakebold
+	#import "@preview/cuti:0.3.0": show-fakebold
+	#show: show-fakebold
 	#set heading(numbering: sustech-undergraduate-heading-numbering)
 	#show heading: it => {
 		set text(
@@ -20,7 +20,7 @@
 	}
 	// 正文样式
 	#set text(
-		lang: "zh",
+		lang: lang,
 		font: FONTS.宋体,
 		size: FSIZE.小四,
 	)
