@@ -36,7 +36,7 @@
       #bibliography(
         bibPath,
         title: none,
-        style: if text.lang == "en" {"institute-of-electrical-and-electronics-engineers"} else {"gb-7714-2005-numeric"}
+        style: "gb-7714-2005-numeric"
       )
     ]
   }
