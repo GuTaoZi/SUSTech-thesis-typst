@@ -5,6 +5,9 @@
 
 #import "headings.typ" : *
 
+// Generate a fake paragraph for indent at the next paragraph
+#let force_indent() = [#context {[#box();#v(-measure(block()+block()).height)]}]
+
 #let documentClass(lang: "zh", body) = [
 	// 标题样式
 	#import "@preview/cuti:0.3.0": show-fakebold
@@ -17,6 +20,8 @@
 			weight: "regular",
 		)
 		it
+		v(-0.5*FSIZE.小四)
+    par(leading: 1.0em)[#text(size:0.0em)[#h(0.0em)]] // Fake paragraph for first-line-indent of the actual first paragraph
 	}
 	// 正文样式
 	#set text(
@@ -27,7 +32,7 @@
 	#set par(
 		first-line-indent: (
 			amount: 2*FSIZE.小四,
-			all: true,
+			all: false,
 		),
 		leading: 1.5*FSIZE.小四,
 	)
