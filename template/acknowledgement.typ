@@ -1,6 +1,6 @@
 #import "../utils/font.typ": *
 
-#let acknoledgement(
+#let acknowledgement(
   show_both: false,
   body
 ) = {

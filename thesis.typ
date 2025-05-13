@@ -115,6 +115,6 @@
 
 #include "sections/appendix.typ"
 
-#acknoledgement(show_both: true)[
+#acknowledgement(show_both: true)[
   截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.1.0。 感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学，你们的支持是模板不断更新迭代的动力，也是笔者最大的荣幸。
 ]
