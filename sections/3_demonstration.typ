@@ -17,7 +17,13 @@ $
 $
 
 #force_indent()
-此段落标记一般不会出现的换行测试。
+此段落标记一般不会出现的*换行测试*。
+
+The following equation is an alternative form of the *radiative transfer equation*, or RTE, used to describe the behavior of scattering & attenuation of light along a light path:
+$
+  bold(L)(bold(o), bold(d)) = integral_(tau_n)^(tau_f) T (bold(o), bold(d)) (Sigma_i (1 - e^(- sigma_i rho_i (bold(o) + tau(bold(d)))))bold(c)_i (bold(d))) d tau
+$
+where $bold(c)_i (bold(d)) = phi_(bold(beta)_i) (bold(d))$ is the color of the $i$th transparent primitive.
 
 == 引用示例 <引用示例>
 

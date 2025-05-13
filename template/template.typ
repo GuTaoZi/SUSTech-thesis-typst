@@ -1,7 +1,7 @@
 #import "abstract_header.typ": *
 #import "abstract_zh.typ": *
 #import "abstract_en.typ": *
-#import "acknowledge.typ": *
+#import "acknowledgement.typ": *
 #import "appendix.typ": *
 #import "content.typ": *
 #import "cover_zh.typ": *

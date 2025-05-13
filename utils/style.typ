@@ -10,8 +10,8 @@
 
 #let documentClass(lang: "zh", body) = [
 	// 标题样式
-	#import "@preview/cuti:0.3.0": show-fakebold
-	#show: show-fakebold
+	#import "@preview/cuti:0.3.0": show-cn-fakebold
+	#show: show-cn-fakebold
 	#set heading(numbering: sustech-undergraduate-heading-numbering)
 	#show heading: it => {
 		set text(
