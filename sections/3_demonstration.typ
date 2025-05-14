@@ -1,4 +1,5 @@
 #import "../template/template.typ": *
+
 = 示例 (`sections/3_demonstration.typ`)
 
 == 段落缩进与公式缩进

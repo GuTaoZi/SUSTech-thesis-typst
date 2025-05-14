@@ -1,3 +1,5 @@
+#import "../template/template.typ": *
+
 == 附录A 代码示例
 
 ```cpp

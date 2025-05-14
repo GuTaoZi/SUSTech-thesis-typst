@@ -1,4 +1,3 @@
-
 #import "template/template.typ": *
 
 // Select the active text language: Chinese(zh) or English(en)
@@ -108,10 +107,11 @@
 
 #include "sections/3_demonstration.typ"
 
+#set heading(numbering: none)
+
 #references(show_both: true)
 
 #appendix(show_both: true)
-#set heading(numbering: none)
 
 #include "sections/appendix.typ"
 
