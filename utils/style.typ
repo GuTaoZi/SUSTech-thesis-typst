@@ -35,7 +35,9 @@
 			all: false,
 		),
 		leading: 1.5*FSIZE.小四,
+		justify: true,
 	)
+	#set figure(gap: 1.2em)
 	// 图片样式
 	#show figure.caption: it => {
 		set text(
@@ -43,6 +45,7 @@
 			size: FSIZE.五号,
 			weight: "regular",
 		)
+		set par(leading: 1.5*FSIZE.五号)
 		it
 	}
 	// 表格样式
