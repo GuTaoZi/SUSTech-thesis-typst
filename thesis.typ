@@ -1,4 +1,3 @@
-
 #import "template/template.typ": *
 
 // Select the active text language: Chinese(zh) or English(en)
@@ -102,80 +101,20 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 
-= 一级标题
+#include "sections/1_lorem.typ"
 
-== 二级标题
+#include "sections/2_introduction.typ"
 
-=== 三级标题
+#include "sections/3_demonstration.typ"
 
-#lorem(300)
-
-$
-a^2 = b^2 + c^2
-$
-
-$
-a^2 = b^2 + c^2
-$ <pt>
-
-= 示例
-
-== 引用示例 <引用示例>
-
-#lorem(20)@wang2010guide #lorem(20) @kopka2004guide 如 @图片示例 和 @表格示例 所示，Typst提供了方便的引用功能，我们也可以通过在标题后加`<some-tag-name>`引用特定的段落，就像 @引用示例 所述的那样。
-
-== 脚注示例
-
-#lorem(20)#footnote("这是一个脚注示例")
-
-
-$
-a^2 = b^2 + c^2
-$ <pt2>
-
-This is a reference of equation @pt, and the above equation @pt2.
-
-== 图片示例
-
-#figure(
-  caption: link("https://www.bilibili.com/opus/792419765560803378")[May. 06, 2023 立夏，画师：\@Setaria_italica ],
-  image(
-    width: 30%,
-    "./images/Lixia.jpg"
-  )
-) <图片示例>
-
-== 表格示例
-
-#figure(
-	table(
-		columns: 4,
-		[],[col-1],[col-2],[col3],
-		[row-1],[1,1],[1,2],[1,3],
-		[row-2],[2,1],[2,2],[2,3],
-		[row-3],[3,1],[3,2],[3,3],
-	),
-	caption: "表格示例"
-)<表格示例>
-#dataSource("表格数据来源：实验数据")
+#set heading(numbering: none)
 
 #references(show_both: true)
 
 #appendix(show_both: true)
-#set heading(numbering: none)
 
-== 附录A 代码示例
+#include "sections/appendix.typ"
 
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-	cout << "Hello, world!" << endl;
-	return 0;
-}
-```
-
-#acknoledgement(show_both: true)[
+#acknowledgement(show_both: true)[
   截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.1.0。 感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学，你们的支持是模板不断更新迭代的动力，也是笔者最大的荣幸。
 ]
