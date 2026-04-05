@@ -1,0 +1,79 @@
+name: Typst Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: typst-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  typst:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Restore Cargo cache
+        uses: actions/cache/restore@v4
+        with:
+          key: cargo-typst-cli
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+
+      - name: Install Typst CLI
+        run: cargo install typst-cli || true
+
+      - name: Save Cargo cache
+        uses: actions/cache/save@v4
+        with:
+          key: cargo-typst-cli
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+
+  compile:
+    needs:
+      - typst
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Restore Typst CLI cache
+        uses: actions/cache/restore@v4
+        with:
+          key: cargo-typst-cli
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Chinese font fallback
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Ensure build directory exists
+        run: mkdir -p build
+
+      - name: Check root thesis entry
+        run: ~/.cargo/bin/typst compile --font-path=./fonts ./thesis.typ ./build/thesis.pdf
+
+      - name: Check starter template entry
+        run: ~/.cargo/bin/typst compile --root=. --font-path=./fonts ./template/thesis.typ ./build/thesis-template.pdf
