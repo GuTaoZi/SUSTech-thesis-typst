@@ -1,1 +1,22 @@
+# Local fonts
 *.ttc
+*.ttf
+*.otf
+
+# Typst build outputs
+/build/*
+!/build/thesis.pdf
+/thesis.pdf
+*.synctex.gz
+*.tmp
+
+# Editor and tool caches
+.tinymist/
+.typst/
+.codex-tmp/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+[package]
+name = "sustech-thesis-typst"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["GuTaoZi <https://github.com/GuTaoZi>"]
+license = "MIT"
+description = "南方科技大学学位论文 Typst 模板。A Typst template for SUSTech thesis."
+repository = "https://github.com/GuTaoZi/SUSTech-thesis-typst"
+keywords = ["SUSTech", "thesis", "Typst", "南方科技大学"]
+categories = ["thesis"]
+compiler = "0.14.0"
+exclude = ["build", "docs"]
+
+[template]
+path = "template"
+entrypoint = "thesis.typ"
+thumbnail = "assets/logo_zh.svg"

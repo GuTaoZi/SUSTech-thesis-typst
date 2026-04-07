@@ -1,4 +1,4 @@
-#import "../template/template.typ": *
+#import "../lib.typ": dataSource, force_indent
 
 = 示例 (`sections/3_demonstration.typ`)
 
@@ -28,7 +28,7 @@ where $bold(c)_i (bold(d)) = phi_(bold(beta)_i) (bold(d))$ is the color of the $
 
 == 引用示例 <引用示例>
 
-#lorem(20)@wang2010guide #lorem(20) @kopka2004guide 如 @图片示例 和 @表格示例 所示，Typst提供了方便的引用功能，我们也可以通过在标题后加`<some-tag-name>`引用特定的段落，就像 @引用示例 所述的那样。
+#lorem(20) #lorem(20) 如 @图片示例 和 @表格示例 所示，Typst提供了方便的引用功能，我们也可以通过在标题后加`<some-tag-name>`引用特定的段落，就像 @引用示例 所述的那样。
 
 == 脚注示例
 
