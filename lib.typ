@@ -33,7 +33,9 @@
   bibliography_show_doi: auto,
   bibliography_show_accessed: auto,
   declaration_print_date: none,
+  include_zh_cover: auto,
   include_en_cover: auto,
+  include_zh_declaration: auto,
   include_en_declaration: auto,
   include_list_of_figures: auto,
   include_list_of_tables: auto,
@@ -79,10 +81,20 @@
   } else {
     bibliography_show_accessed
   }
+  let include_zh_cover = if include_zh_cover == auto {
+    options.include_zh_cover
+  } else {
+    include_zh_cover
+  }
   let include_en_cover = if include_en_cover == auto {
     options.include_en_cover
   } else {
     include_en_cover
+  }
+  let include_zh_declaration = if include_zh_declaration == auto {
+    options.include_zh_declaration
+  } else {
+    include_zh_declaration
   }
   let include_en_declaration = if include_en_declaration == auto {
     options.include_en_declaration
@@ -158,13 +170,17 @@
     print_date: declaration_print_date,
   )
   let covers = () => {
-    cover_zh()
+    if include_zh_cover {
+      cover_zh()
+    }
     if include_en_cover {
       cover_en()
     }
   }
   let declarations = () => {
-    declaration_zh()
+    if include_zh_declaration {
+      declaration_zh()
+    }
     if include_en_declaration {
       declaration_en()
     }
