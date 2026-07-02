@@ -1,6 +1,6 @@
 #import "../lib.typ": dataSource, force_indent
 
-= 示例 (`sections/3_demonstration.typ`)
+= 示例
 
 == 段落缩进与公式缩进
 

@@ -10,6 +10,8 @@
 
 推荐使用 VS Code + [Tinymist Typst](https://github.com/Myriad-Dreamin/tinymist) 或 Typst CLI 本地编辑。
 
+> **环境要求**：本模板基于 [Typst](https://github.com/typst/typst) `0.15.0`（当前最新稳定版）开发与测试，推荐使用 `0.15.0` 或更高版本编译。
+
 ```bash
 typst compile --font-path fonts thesis.typ build/thesis.pdf
 typst watch --font-path fonts thesis.typ build/thesis.pdf

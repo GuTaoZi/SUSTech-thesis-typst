@@ -1,4 +1,4 @@
-#import "@preview/codly:1.2.0": *
+#import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.7": *
 // 官方模板就代码块样式没有作要求，因此本模板使用codly插件来渲染代码块。
 // 使用说明：https://typst.app/universe/package/codly/

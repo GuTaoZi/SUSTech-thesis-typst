@@ -1,4 +1,4 @@
-= Introduction (`sections/2_introduction.typ`)
+= Introduction
 
 This is an introductory section included from `thesis.typ`.
 

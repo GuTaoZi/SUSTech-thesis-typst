@@ -1,5 +1,5 @@
 // For published package usage, switch to:
-// #import "@preview/sustech-thesis-typst:0.1.0": setup
+// #import "@preview/sustech-thesis-typst:0.2.0": setup
 #import "../lib.typ": setup
 #import "../utils/datetime_display.typ": datetime_display_zh
 

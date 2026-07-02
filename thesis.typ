@@ -9,7 +9,7 @@
     confidentiality_level: "公开",
     udc: "UDC",
     title: ("基于Typst的", "南方科技大学毕业论文模板"),
-    subtitle: "v0.1.0",
+    subtitle: "v0.2.0",
     author: "咕桃",
     student_id: "32123432",
     department: "计算机科学与工程系",
@@ -22,7 +22,7 @@
     thesis_id: "20260405",
     udc: "UDC",
     title: ("Graduation Thesis Template", "Based on Typst"),
-    subtitle: "v0.1.0",
+    subtitle: "v0.2.0",
     author: "GuTao",
     student_id: "32123432",
     department: "Computer Science and Engineering",
@@ -71,5 +71,5 @@
 ]
 
 #(thesis.acknowledgement)[
-  截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.1.0。感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学。
+  截至 #datetime_display_zh(datetime.today())，本模板当前版本为v0.2.0。感谢在模板开发过程中提出宝贵意见和建议的同学们，以及每一位使用本模板的同学。
 ]
